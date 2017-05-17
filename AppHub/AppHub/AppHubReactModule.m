@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RCTBridgeModule.h"
-#import "RCTDefines.h"
-#import "RCTEventDispatcher.h"
+#import <React/RCTBridgeModule.h>
+#import <React/RCTDefines.h>
+#import <React/RCTEventDispatcher.h>
 
 #import "AppHub.h"
 #import "AHBuild+Private.h"
