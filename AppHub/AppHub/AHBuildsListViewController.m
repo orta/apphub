@@ -105,8 +105,8 @@
     NSString *createdString = [_dateFormatter stringFromDate:createdDate];
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", item[AHBuildDataNameKey], createdString];
-    NSString *subtitle = [[item[AHBuildDataCompatibleIOSVersionsKey] allValues] componentsJoinedByString:@", "];
-    cell.detailTextLabel.text = subtitle ?: item[AHBuildDataDescriptionKey];
+    NSString *fallbackSubtitle = [[item[AHBuildDataCompatibleIOSVersionsKey] allValues] componentsJoinedByString:@", "];
+    cell.detailTextLabel.text = item[AHBuildDataDescriptionKey] ?: fallbackSubtitle;
     
     return cell;
 }
